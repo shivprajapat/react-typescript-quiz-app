@@ -1,5 +1,5 @@
 import { Difficulty, Question } from "../types";
-import { shufflearray } from "./utils";
+import { shuffleArray } from "./utils";
 
 export const fetchQuestions = async (
   amount: number,
@@ -9,7 +9,7 @@ export const fetchQuestions = async (
   const data = await (await fetch(response)).json();
   return data.results.map((question: Question) => ({
     ...question,
-    answers: shufflearray([
+    answers: shuffleArray([
       ...question.incorrect_answers,
       question.correct_answer,
     ]),

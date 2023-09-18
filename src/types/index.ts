@@ -11,7 +11,7 @@ export type QuestionProps = {
   question: string;
   answers: string[];
   callback: (e: MouseEvent<HTMLButtonElement>) => void;
-  useranswer: AnswerObject | undefined;
+  userAnswer: AnswerObject | undefined;
   questionNr: number;
   totalQuestions: number;
 };
